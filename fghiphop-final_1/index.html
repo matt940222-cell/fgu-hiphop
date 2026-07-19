@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>佛光嘻哈研究社</title>
+  <meta name="description" content="佛光大學嘻哈研究社官方網站 — 音樂、活動、照片、留言板">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=LXGW+WenKai+Mono+TC&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== 入場畫面 ===== -->
+  <div id="entry-screen">
+    <div class="entry-inner">
+      <p class="entry-title" id="entry-title">佛光嘻哈研究社</p>
+      <p class="entry-sub" id="entry-sub"></p>
+      <button id="entry-btn" type="button">▶ 點擊進入</button>
+      <p class="entry-hint">進入後音樂開始播放</p>
+    </div>
+  </div>
+
+  <!-- ===== 頂部系統列 ===== -->
+  <header class="os-bar">
+    <span class="os-bar-name">● FGU_HIPHOP.OS</span>
+    <span class="os-bar-clock" id="os-clock">--:--</span>
+  </header>
+
+  <main>
+
+    <!-- ===== 標題區 ===== -->
+    <section class="hero">
+      <h1 class="hero-title" id="hero-title">佛光嘻哈研究社</h1>
+      <div class="hero-spray"></div>
+      <p class="hero-slogan" id="hero-slogan"></p>
+    </section>
+
+    <!-- ===== CD 播放器 ===== -->
+    <section class="window player-window" id="player">
+      <div class="window-bar">
+        <span>▸ CD_PLAYER.EXE</span>
+        <span class="window-bar-btns">— □ ×</span>
+      </div>
+      <div class="player-body">
+        <div class="disc" id="disc">
+          <div class="disc-label"><div class="disc-hole"></div></div>
+        </div>
+        <div class="player-info">
+          <p class="player-track-no" id="track-no">TRACK -/-</p>
+          <p class="player-track-title" id="track-title">尚未載入</p>
+          <div class="progress" id="progress-bar" role="slider" aria-label="播放進度" tabindex="0">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="player-times">
+            <span id="time-current">0:00</span><span id="time-total">0:00</span>
+          </div>
+          <div class="player-controls">
+            <button id="btn-prev" type="button" aria-label="上一首">⏮</button>
+            <button id="btn-play" type="button" aria-label="播放或暫停">▶</button>
+            <button id="btn-next" type="button" aria-label="下一首">⏭</button>
+            <button id="btn-playlist" type="button" aria-label="開關歌單">♪≡</button>
+          </div>
+        </div>
+      </div>
+      <div class="playlist" id="playlist" hidden></div>
+      <audio id="audio" preload="metadata"></audio>
+    </section>
+
+    <!-- ===== 關於我們 ===== -->
+    <section class="window about-window">
+      <div class="window-bar">
+        <span>▸ 關於我們.TXT</span>
+        <span class="window-bar-btns">— □ ×</span>
+      </div>
+      <div class="about-body">
+        <p id="about-text"></p>
+      </div>
+    </section>
+
+    <!-- ===== 照片牆 ===== -->
+    <section class="photos-section">
+      <p class="section-label">▸ 照片資料夾 /PHOTOS</p>
+      <div class="photos-grid" id="photos-grid"></div>
+    </section>
+
+    <!-- ===== 近期活動 ===== -->
+    <section class="events-note" id="events-note">
+      <p class="events-label">▸ 近期活動.TXT</p>
+      <div id="events-list"></div>
+    </section>
+
+    <!-- ===== 留言終端機 ===== -->
+    <section class="terminal" id="guestbook">
+      <p class="terminal-label">GUESTBOOK — 匿名留言終端機</p>
+      <div class="terminal-log" id="comments-list">
+        <p class="terminal-loading">載入留言中...</p>
+      </div>
+      <div class="terminal-input-row">
+        <input id="comment-name" type="text" placeholder="暱稱" autocomplete="off">
+        <input id="comment-msg" type="text" placeholder="輸入你的留言_" autocomplete="off">
+        <button id="comment-send" type="button">送出</button>
+      </div>
+      <p class="terminal-note" id="comment-note"></p>
+    </section>
+
+    <!-- ===== 底部按鈕 ===== -->
+    <section class="cta-row">
+      <a class="cta cta-ig" id="link-ig" href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+      <a class="cta cta-join" id="link-join" href="#" target="_blank" rel="noopener">加入我們</a>
+    </section>
+
+    <footer class="footer" id="footer-text"></footer>
+
+  </main>
+
+  <!-- 照片燈箱 -->
+  <div id="lightbox" hidden>
+    <button id="lightbox-close" type="button" aria-label="關閉">×</button>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <!-- Firebase(留言區用,config 沒開啟時不會載入) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/comments.js"></script>
+</body>
+</html>

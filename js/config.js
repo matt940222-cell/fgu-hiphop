@@ -22,7 +22,7 @@ const SITE_CONFIG = {
   // 把 mp3 檔丟進 assets/audio/ 資料夾,然後在下面加一行。
   // 新增歌曲範例:{ title: "歌名", file: "assets/audio/檔名.mp3" },
   songs: [
-    { title: "I WON'T LET YOU DOWN — J HOT", file: "assets/audio/i-wont-let-u-down.mp3" },
+    { title: "I WON'T LET YOU DOWN — J HOT", file: "assets/audio/i-wont-let-u-down.mp3.mp3" },
   ],
 
   // ---------- 照片牆 ----------
@@ -30,8 +30,9 @@ const SITE_CONFIG = {
   // rotate 是歪斜角度(度數),負數往左歪、正數往右歪,不填就隨機。
   photos: [
     { src: "assets/photos/IMG_2213.jpg", caption: "IMG_2213.jpg", rotate: -2 },
-    { src: "assets/photos/IMG_9189.jpg", caption: "IMG_9189.jpg", rotate: 1.5 },
-    { src: "assets/photos/IMG_1559.jpg", caption: "IMG_1559.jpg", rotate: -1 },
+    { src: "assets/photos/IMG_9189.JPG", caption: "IMG_9189.jpg", rotate: 1.5 },
+    // 下面這張等 HEIC 轉成 jpg 上傳後,把行首的兩條斜線「//」刪掉就會顯示
+    // { src: "assets/photos/IMG_1559.jpg", caption: "IMG_1559.jpg", rotate: -1 },
   ],
 
   // ---------- 近期活動 ----------
@@ -60,3 +61,4 @@ const SITE_CONFIG = {
   },
 
 };
+

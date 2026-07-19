@@ -10,36 +10,33 @@ const SITE_CONFIG = {
   clubName: "佛光嘻哈研究社",
   clubNameEn: "FGU HIP-HOP RESEARCH CLUB",
   slogan: "NOW PLAYING SINCE DAY ONE",
-  instagramUrl: "https://www.instagram.com/你們的IG帳號/",
-  joinUrl: "https://www.instagram.com/你們的IG帳號/", // 「加入我們」按鈕連結,可換成 Google 表單
+  instagramUrl: "https://www.instagram.com/fgu_hiphop/",
+  joinUrl: "https://www.instagram.com/fgu_hiphop/", // 「加入我們」按鈕連結,可換成 Google 表單
   footerText: "© 2026 佛光嘻哈研究社 — KEEP IT REAL",
 
   // ---------- 關於我們 ----------
   aboutTitle: "關於我們",
-  aboutText: "這裡放社團簡介。饒舌、DJ、Beatbox、街舞,寫你們實際在做的事。改 js/config.js 裡的 aboutText 就能換掉這段。",
+  aboutText: "我們超爆。",
 
   // ---------- 歌單 ----------
   // 把 mp3 檔丟進 assets/audio/ 資料夾,然後在下面加一行。
   // 新增歌曲範例:{ title: "歌名", file: "assets/audio/檔名.mp3" },
   songs: [
-    { title: "社歌 DEMO", file: "assets/audio/demo.mp3" },
-    { title: "CYPHER 現場錄音", file: "assets/audio/cypher.mp3" },
+    { title: "I WON'T LET YOU DOWN — J HOT", file: "assets/audio/i-wont-let-u-down.mp3" },
   ],
 
   // ---------- 照片牆 ----------
   // 把照片丟進 assets/photos/ 資料夾,然後在下面加一行。
   // rotate 是歪斜角度(度數),負數往左歪、正數往右歪,不填就隨機。
   photos: [
-    { src: "assets/photos/photo1.jpg", caption: "cypher_night_01.png", rotate: -2 },
-    { src: "assets/photos/photo2.jpg", caption: "社課側拍.png", rotate: 1.5 },
-    { src: "assets/photos/photo3.jpg", caption: "成發彩排.png", rotate: -1 },
-    { src: "assets/photos/photo4.jpg", caption: "社遊合照.png", rotate: 2 },
+    { src: "assets/photos/IMG_2213.jpg", caption: "IMG_2213.jpg", rotate: -2 },
+    { src: "assets/photos/IMG_9189.jpg", caption: "IMG_9189.jpg", rotate: 1.5 },
+    { src: "assets/photos/IMG_1559.jpg", caption: "IMG_1559.jpg", rotate: -1 },
   ],
 
   // ---------- 近期活動 ----------
   events: [
-    { date: "09/09", title: "迎新 CYPHER 之夜", detail: "學生活動中心 19:00 · 免報名直接來" },
-    { date: "09/25", title: "BEAT 製作工作坊", detail: "攜帶筆電 · 名額 20" },
+    { date: "09月", title: "跑馬古道活動(暫定)", detail: "礁溪跑馬古道 · 日期未定,有可能延期,詳情關注 IG" },
   ],
 
   // ---------- 貼紙(散落在頁面上的小字) ----------

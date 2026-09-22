@@ -11,7 +11,7 @@ const SITE_CONFIG = {
   clubNameEn: "FGU HIP-HOP RESEARCH CLUB",
   slogan: "NOW PLAYING SINCE DAY ONE",
   instagramUrl: "https://www.instagram.com/fgu__hiphop/",
-  joinUrl: "https://www.instagram.com/fgu_hiphop/", // 「加入我們」按鈕連結,可換成 Google 表單
+  joinUrl: "https://www.instagram.com/fgu__hiphop/", // 「加入我們」按鈕連結,可換成 Google 表單
   footerText: "© 2026 佛光嘻哈研究社 — KEEP IT REAL",
 
   // ---------- 關於我們 ----------
